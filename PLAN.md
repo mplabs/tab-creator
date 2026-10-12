@@ -12,9 +12,11 @@ A public, offline-capable PWA for creating guitar tabs. Output as ASCII, `.tex` 
 | Storage | Local-first (IndexedDB); optional account sync, last-write-wins per document |
 | Auth | Email magic link |
 | Business | Free; PDF compile rate-limited per user/IP |
-| Collaboration | Out of scope (read-only share links maybe later) |
+| Collaboration | Out of scope (read-only share links after v1) |
 | Editing | Visual grid editor + text DSL, both over one document model |
-| Notation | Fret numbers, rhythm, techniques, chord names/diagrams, lyrics, sections, repeats, capo, tuning |
+| Notation | Fret numbers, rhythm, basic techniques, chord names + chord diagrams (v1), lyrics, sections, repeats, capo, tuning |
+| v1 techniques | Hammer-on, pull-off, slide, bend, dead note. Deferred: vibrato, palm mute, harmonics, tapping |
+| Sharing | Read-only share links deferred to after v1 |
 | Instruments | 6-string guitar, custom tunings, capo |
 | Outputs | ASCII tab, `.tex`, PDF (A4, full song sheet) |
 | ASCII rhythm row | Optional toggle, default off |
@@ -55,6 +57,5 @@ infra/tex         Dockerfile for locked-down lualatex (no shell escape, CPU/mem/
 
 ## Still open
 
-- Chord diagrams in v1 or v1.1?
-- Read-only share links in v1 or later?
-- Exact technique set for v1.
+- Confirm the v1 technique list above is what "basics" means (palm mute and vibrato are the borderline ones).
+- Chord diagram scope: free-form fingerings per diagram, or a built-in chord library too?
